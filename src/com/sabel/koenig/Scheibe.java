@@ -28,6 +28,7 @@ public class Scheibe extends JPanel {
             if (jRadioButtons[i].isSelected()) {
                 anzahl++;
             }
+            jRadioButtons[i].setEnabled(false);
         }
         System.out.println(anzahl);
         return anzahl;

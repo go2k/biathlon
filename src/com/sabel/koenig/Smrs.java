@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class smrs extends JFrame {
+public class Smrs extends JFrame {
 
     private JPanel jPanel;
     private Athlet athlet1;
@@ -21,7 +21,7 @@ public class smrs extends JFrame {
     private JPanel jPanelGesamtfehler;
 
 
-    public smrs() {
+    public Smrs() {
 
         this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         this.setSize(600, 200);
