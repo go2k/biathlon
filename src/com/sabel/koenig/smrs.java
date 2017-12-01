@@ -10,6 +10,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class smrs extends JFrame {
 
@@ -38,7 +41,7 @@ public class smrs extends JFrame {
 
         jPanelGesamtfehler = new JPanel();
         jButtonGesamtfehler = new JButton("Gesamtfehler");
-        lblGesamtfehler = new JLabel("Gesamtfehler");
+        lblGesamtfehler = new JLabel("? Gesamtfehler");
         jPanelGesamtfehler.add(jButtonGesamtfehler);
         jPanelGesamtfehler.add(lblGesamtfehler);
 
@@ -51,12 +54,22 @@ public class smrs extends JFrame {
 
     private void speichern() {
 
-        if (true) {
-            JOptionPane.showMessageDialog(this, "Anzahl dert Fehler ertfolgreich gespeichert!", "Programm wird beendet", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern", "Programm wird beendet", JOptionPane.WARNING_MESSAGE);
-        }
+        BufferedWriter bw = null;
+        try {
+            bw = new BufferedWriter(new FileWriter("Fehler.txt"));
+            bw.write(athlet1.anzahlFehler() + athlet2.anzahlFehler() + " Fehler");
+            JOptionPane.showMessageDialog(this, "Anzahl dert Fehler erfolgreich gespeichert!", "Programm wird beendet", JOptionPane.INFORMATION_MESSAGE);
 
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Fehler beim Speichern", "Programm wird beendet", JOptionPane.WARNING_MESSAGE);
+            e.printStackTrace();
+        } finally {
+            try {
+                bw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 

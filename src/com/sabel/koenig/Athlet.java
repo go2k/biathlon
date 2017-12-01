@@ -44,7 +44,7 @@ public class Athlet extends JPanel {
         scheibeAthletLiegend = new Scheibe("liegend");
         scheibeAthletStehend = new Scheibe("stehend");
         jButton = new JButton("Fehler ermitteln");
-        lblErgebnis = new JLabel("Fehler");
+        lblErgebnis = new JLabel("? Fehler");
 
         this.add(lblZeile);
         this.add(scheibeAthletLiegend);

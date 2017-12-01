@@ -19,7 +19,7 @@ public class Scheibe extends JPanel {
             this.add(jRadioButtons[i]);
         }
         this.setBorder(new TitledBorder(artDesSchiessens));
-        this.setSize(150,50);
+        //this.setSize(150,50);
     }
 
     public int anzahlFehler() {
@@ -29,7 +29,7 @@ public class Scheibe extends JPanel {
                 anzahl++;
             }
         }
-        System.out.println(anzahl);
+        //System.out.println(anzahl);
         return anzahl;
     }
 }
