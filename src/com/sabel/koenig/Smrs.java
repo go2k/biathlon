@@ -14,7 +14,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class smrs extends JFrame {
+public class Smrs extends JFrame {
 
     private JPanel jPanel;
     private Athlet athlet1;
@@ -24,7 +24,7 @@ public class smrs extends JFrame {
     private JPanel jPanelGesamtfehler;
 
 
-    public smrs() {
+    public Smrs() {
 
         this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         this.setSize(600, 200);
